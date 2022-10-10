@@ -19,7 +19,6 @@ function App() {
             exact
             component={Project} */}
           {/* /> */}
-          {/* <Route component={NotFoundPage} /> */}
         </Switch>
       </BrowserRouter>
     </>
