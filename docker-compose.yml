@@ -1,0 +1,21 @@
+version: '3'
+services:
+  # app:
+  #   restart: always
+  #   build: .
+  #   command: node bin/www
+  #   env_file: ./server/.env
+  #   ports:
+  #     - 3000:3000
+  #   volumes:
+  #     - .:/usr/src/app
+
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb:/data/db
+
+volumes:
+  mongodb:
