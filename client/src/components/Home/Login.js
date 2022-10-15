@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Formik } from 'formik';
 import api from '../../services/api';
 
 export default function Login() {
 
   const [apiMessage, setApiMessage] = useState({ type: '', message: '' });
+  const history = useHistory();
 
   return (
-    <div className="register-form">
+    <div className="form-content">
       <span className="form-title">Login</span>
       <Formik
         initialValues={{ email: '', password: '' }}
@@ -30,6 +32,7 @@ export default function Login() {
           })
             .then(() => {
               setSubmitting(false);
+              history.push("/projects");
             })
             .catch((err) => {
               setSubmitting(false);

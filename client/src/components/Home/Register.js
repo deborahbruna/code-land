@@ -7,7 +7,7 @@ export default function Register() {
   const [apiMessage, setApiMessage] = useState({ type: '', message: '' });
 
   return (
-    <div className="register-form">
+    <div className="form-content">
       <span className="form-title">User Registration</span>
       <Formik
         initialValues={{ name: '', email: '', password: '' }}
@@ -85,7 +85,7 @@ export default function Register() {
               />
               {isSubmitting ?
                 <button>
-                  <i className="fa fa-circle-o-notch fa-spin"></i>Loading
+                  <i className="loading-icon-margin fa-circle-o-notch fa-spin"></i>Loading
                 </button>
                 :
                 <button type="submit" disabled={isSubmitting}>

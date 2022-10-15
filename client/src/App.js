@@ -1,12 +1,14 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch} from 'react-router-dom';
-import Home from './components/Home/Home';
-
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Home from './components/Home';
+import Navbar from './components/Navbar';
+import Projects from './components/Projects';
 
 function App() {
-    
+
   return (
-    <>
+    <div className="wrapper">
+      <Navbar />
       <BrowserRouter basename='/code-land/'>
         <Switch>
           <Route
@@ -14,14 +16,14 @@ function App() {
             exact
             component={Home}
           />
-          {/* <Route
+          <Route
             path="/projects"
             exact
-            component={Project}
-          /> */}
+            component={Projects}
+          />
         </Switch>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

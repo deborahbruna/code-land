@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-    // 'mongodb://mongo:27017/codeland',
-    'mongodb://localhost:27017/codeland',
+    'mongodb://mongo:27017/codeland',
     { useNewUrlParser: true }
   )
   .then(() => console.log('MongoDB Connected'))
