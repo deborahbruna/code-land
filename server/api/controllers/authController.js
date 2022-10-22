@@ -30,10 +30,13 @@ router.post('/register', async (req, res) => {
     const user = await User.create(req.body);
 
     user.password = undefined;
+    const token = generateToken({ id: user.id });
 
-    res.send({
+    res.cookie("access_token", token, {
+      httpOnly: true
+    }).send({
       user,
-      token: generateToken({ id: user.id })
+      token
     });
 
   } catch (err) {
@@ -54,10 +57,13 @@ router.post('/authenticate', async (req, res) => {
     return res.status(400).send({ error: 'Invalid password' });
 
   user.password = undefined;
+  const token = generateToken({ id: user.id });
 
-  res.send({
+  res.cookie("access_token", token, {
+    httpOnly: true
+  }).send({
     user,
-    token: generateToken({ id: user.id })
+    token
   });
 
 });
