@@ -1,0 +1,196 @@
+.form-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 45px;
+  margin: 0 auto;
+  color: #0D2F4B;
+  display: table;
+}
+
+.form-subtitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #0D2F4B;
+  display: table;
+}
+
+.task-inputs {
+  padding: 1rem;
+}
+
+#project-form input {
+  padding: 0 1rem;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.51);
+  border: 1px solid #6E6F76;
+  border-radius: 10px;
+  height: 2rem;
+  margin: 1rem;
+  width: 45%;
+}
+
+.button-div {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.create-project-button {
+  background: #94d3fb !important;
+  color: #0D2F4B !important;
+  cursor: pointer;
+}
+
+.projects-list {
+  border: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: initial;
+  width: 100%;
+}
+
+.project-list-item {
+  border-top: 1px solid #e0e0e0;
+  overflow: visible;
+  transition: all .11s cubic-bezier(.2, 0, .38, .9);
+}
+
+ul.projects-list>li:last-child {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.project-list-button {
+  align-items: flex-start;
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  color: #161616;
+  cursor: pointer;
+  display: inline-block;
+  display: flex;
+  flex-direction: row-reverse;
+  font-family: inherit;
+  font-size: 100%;
+  justify-content: flex-start;
+  margin: 0;
+  min-height: 2.5rem;
+  padding: .625rem 0;
+  position: relative;
+  text-align: start;
+  background-color: #fff !important;
+  vertical-align: initial;
+  width: 100%;
+}
+
+.project-list-button:hover {
+  border-radius: 0px !important;
+  background-color: #e8e8e8 !important;
+}
+
+.project-list-info {
+  font-size: .875rem;
+  font-weight: 400;
+  letter-spacing: .16px;
+  line-height: 1.42857;
+  margin: 0 0 0 1rem;
+  text-align: left;
+  width: 100%;
+  z-index: 1;
+}
+
+.project-list-title {
+  font-size: .875rem;
+  font-weight: 400;
+  letter-spacing: .16px;
+  line-height: 1.42857;
+}
+
+.project-list-description {
+  font-size: .675rem;
+  font-weight: 400;
+  letter-spacing: .16px;
+  line-height: 1.42857;
+  color: #6E6F76;
+}
+
+.project-list-arrow {
+  fill: #161616;
+  flex: 0 0 1rem;
+  height: 1rem;
+  margin: 2px 1rem 0 0;
+  outline: 2px solid #0000;
+  outline-offset: -2px;
+  transition: all .11s cubic-bezier(.2, 0, .38, .9);
+  width: 1rem;
+}
+
+.loading-select {
+  position: relative;
+  padding: 0;
+  border: none;
+  background: #e8e8e8;
+  box-shadow: none;
+  pointer-events: none;
+  width: 100%;
+  height: 2.5rem;
+}
+
+.loading-select::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: 3000ms ease-in-out skeleton infinite;
+  animation: 3000ms ease-in-out skeleton infinite;
+  background: var(--cds-skeleton-element, #c6c6c6);
+  content: "";
+  will-change: transform-origin, transform, opacity;
+}
+
+/* Skeleton */
+.loading-input {
+  height: 2rem;
+  width: 45%;
+  padding: 0 1rem;
+  border-radius: 10px;
+  height: 2rem;
+  margin: auto;
+}
+
+.background-masker {
+  background-color: #fff;
+  position: relative;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -800px 0
+  }
+
+  100% {
+    background-position: 800px 0
+  }
+}
+
+.animated-background {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background-color: #f6f7f8;
+  background: linear-gradient(to right, #eeeeee 8%, #bbbbbb 18%, #eeeeee 33%);
+  background-size: 800px 104px;
+  height: 100%;
+  position: relative;
+}
+
+.fields {
+  display: flex;
+}

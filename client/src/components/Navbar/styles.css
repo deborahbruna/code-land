@@ -1,0 +1,26 @@
+.navbar {
+  min-height: 2rem;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0.5rem 0.8rem;
+  overflow: hidden;
+  background-color: #05182B;
+}
+
+.navbar .il-navbar {
+  max-height: 1.5rem;
+  color: #AFABAB;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.navbar .navbar-icon {
+  height: 25px;
+  width: 27px;
+  display: block;
+}
